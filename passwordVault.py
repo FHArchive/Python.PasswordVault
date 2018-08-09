@@ -1,4 +1,4 @@
-# PasswordVault (20180808) using OTP for Python 3.6 
+# PasswordVault (20180809) using OTP for Python 3.6 
 
 # Import sys to exit the program, random to generate a master key and io to read and write to files
 import sys
@@ -36,10 +36,13 @@ you should already know it""")
     keystring = input(">")
     choice()
 
-# promps the user to choose what they want to do next (default is Add Password)
+# Prompts the user to choose what they want to do next (default is Add Password)
 def choice():
-    print("Add Password, Remove Password or Show Passwords or Quit? (A/r/s/q)")
-    choice = input(">").lower()[0]
+    print("Add Password, Remove Password, Show Passwords or Quit? (A/r/s/q)")
+    try:
+        choice = input(">").lower()[0]
+    except:
+        choice = 'a'
     if choice == 'q':
         myquit()
     elif choice == 's':
@@ -61,7 +64,7 @@ def myquit():
     # Close the program 
     sys.exit()
 
-# Prompts the user to select the index that they wish to remove and then removes that password. No error catching here so a great opportunity to break everything
+# Prompts the user to select the index that they wish to remove and then removes that password
 def remove():
     # Show the passwords 
     decrypt_part()
@@ -70,7 +73,10 @@ def remove():
     i = int(input(">"))
     i -=  1
     # Delete the password at a specified index
-    del passwords[i]
+    try:
+        del passwords[i]
+    except:
+        print("Unsuccessful removal of password")
     # Show the passwords again 
     decrypt_part()
     choice()
@@ -124,7 +130,7 @@ def genMasterPassword():
         masterPassword += chr(random.randint(36,124))
     return masterPassword
 
-# Starts the progrma 
+# Starts the program 
 start()
 
 
