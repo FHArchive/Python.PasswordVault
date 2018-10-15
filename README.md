@@ -1,6 +1,20 @@
 # PasswordVault using OTP for Python 3.6 
 PasswordVault is a proof of concept password vault in python using One Time Pad encryption. It uses the master password to encrypt passwords that the user enters. Bear in mind that this is a proof of concept program and therefore should not be used as you password manager. If you are looking for one of them, there are plenty to choose from on the web...
 
+# Language information 
+## Built for
+This program has been written for Python 3 and has been tested with 
+Python version 3.7.0 https://www.python.org/downloads/release/python-370/ 
+on a Windows 10 PC. 
+## Other versions
+To install Python, go to https://www.python.org/ and download the latest version. 
+# How to run
+1. Download or clone this GitHub repository 
+2. (If downloaded) Extract the zip archive
+3. Open the .py file in IDLE
+4. Run by pressing F5 or by selecting Run> Run Module
+
+
 # How to use the program
 PasswordVault has been written in Python 3.6 but should work in all versions of Python 3 (however, it will not work in (Python 2). The program runs in the command window (or IDLE) - it is therefore text based. Enter your master password (when you first run the program copy the one it gives you - for subsequent times, ignore it). Then enter single characters to add a password, remove a password, show passwords or quit the program 
 
