@@ -1,22 +1,79 @@
-# PasswordVault using OTP for Python 3.6 
-PasswordVault is a proof of concept password vault in python using One Time Pad encryption. It uses the master password to encrypt passwords that the user enters. Bear in mind that this is a proof of concept program and therefore should not be used as you password manager. If you are looking for one of them, there are plenty to choose from on the web...
 
-# Language information 
-## Built for
+
+<p float="left">
+<img src="https://img.shields.io/github/languages/top/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="Github top language">
+<img src="https://img.shields.io/codacy/grade/:codacy-proj-id:.svg?style=flat-square" alt="Codacy grade">
+<img src="https://img.shields.io/codacy/coverage/:codacy-proj-id:.svg?style=flat-square" alt="Codacy coverage">
+<img src="https://img.shields.io/github/repo-size/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="Repository size">
+<img src="https://img.shields.io/github/issues/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="Issues">
+<img src="https://img.shields.io/github/license/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="License">
+<img src="https://img.shields.io/github/commit-activity/m/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="Commit activity">
+<img src="https://img.shields.io/github/last-commit/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="Last commit">
+</p>
+
+
+# Python.PasswordVault
+
+
+<img src="readme-assets/icons/proj-icon.png" alt="Project Icon" width="100">
+
+PasswordVault is a proof of concept password vault in python using One Time Pad
+encryption. It uses the master password to encrypt passwords that the user 
+enters. Bear in mind that this is a proof of concept program and therefore 
+should not be used as you password manager. If you are looking for one of 
+them, there are plenty to choose from on the web...
+
+
+## Download
+### Clone
+#### Using The Command Line 
+1. Press the Clone or download button in the top right
+2. Copy the URL (link)
+3. Open the command line and change directory to where you wish to clone to
+4. Type 'git clone' followed by URL in step 2
+```bash
+$ git clone https://github.com/[user-name]/[repository]
+```
+
+More information can be found at 
+<https://help.github.com/en/articles/cloning-a-repository> 
+
+#### Using GitHub Desktop
+1. Press the Clone or download button in the top right
+2. Click open in desktop
+3. Choose the path for where you want and click Clone
+
+More information can be found at 
+<https://help.github.com/en/desktop/contributing-to-projects/cloning-a-repository-from-github-to-github-desktop>
+
+### Download Zip File
+
+1. Download this GitHub repository
+2. Extract the zip archive
+3. Copy/ move to the desired location
+
+
+## Language information 
+### Built for
 This program has been written for Python 3 and has been tested with 
-Python version 3.7.0 https://www.python.org/downloads/release/python-370/ 
+Python version 3.7.0 <https://www.python.org/downloads/release/python-370/> 
 on a Windows 10 PC. 
-## Other versions
-To install Python, go to https://www.python.org/ and download the latest version. 
-# How to run
-1. Download or clone this GitHub repository 
-2. (If downloaded) Extract the zip archive
-3. Open the .py file in IDLE
-4. Run by pressing F5 or by selecting Run> Run Module
+### Other versions
+To install Python, go to <https://www.python.org/> and download the latest 
+version. 
+## How to run
+1. Open the .py file in IDLE
+2. Run by pressing F5 or by selecting Run> Run Module
 
 
-# How to use the program
-PasswordVault has been written in Python 3.6 but should work in all versions of Python 3 (however, it will not work in (Python 2). The program runs in the command window (or IDLE) - it is therefore text based. Enter your master password (when you first run the program copy the one it gives you - for subsequent times, ignore it). Then enter single characters to add a password, remove a password, show passwords or quit the program 
+
+## How to use the program
+PasswordVault has been written in Python 3.6 but should work in all versions 
+of Python 3 (however, it will not work in (Python 2). The program runs in the 
+command window (or IDLE) - it is therefore text based. Enter your master 
+password (when you first run the program copy the one it gives you - for 
+subsequent times, ignore it). Then enter single characters to add a password, 
+remove a password, show passwords or quit the program 
 
 *   Add password - A (Default option)
 *   Remove password - r
@@ -24,31 +81,72 @@ PasswordVault has been written in Python 3.6 but should work in all versions of 
 *   Quit        -    q
 
 
-# General Code Overview:
-Import sys to exit the program, random to generate a master key and io to read and write to files
+## General Code Overview:
+Import sys to exit the program, random to generate a master key and io to read 
+and write to files
 
 Global list containing encrypted passwords and key 
 
-masterPassword for the example text file containing passwords "hello" and "why" - I advise you choose better passwords for sites!
+masterPassword for the example text file containing passwords "hello" and "why"
+- I advise you choose better passwords for sites!
 masterPassword = ,B3U*]Y)gO'aC(B|gGx1
 
-start() Opens the password file and writes each password to the passwords list then promps the user to enter their master password 
+start() Opens the password file and writes each password to the passwords list 
+then promps the user to enter their master password 
 
-choice() Prompts the user to choose what they want to do next (default is Add Password) - "Add Password, Remove Password or Show Passwords or Quit? (A/r/s/q)"
+choice() Prompts the user to choose what they want to do next (default is Add 
+Password) - "Add Password, Remove Password or Show Passwords or Quit? 
+(A/r/s/q)"
 
-myquit() Writes the passwords to the password file and exits the program (save and quit)
+myquit() Writes the passwords to the password file and exits the program (save 
+and quit)
 
-remove() Shows the passwords, Prompts the user to select the index that they wish to remove and then removes that password, and finally shows the updated passwords
+remove() Shows the passwords, Prompts the user to select the index that they 
+wish to remove and then removes that password, and finally shows the updated 
+passwords
 
-encrypt() Takes a password, encrypts it using the master password and writes it to the passwords list 
+encrypt() Takes a password, encrypts it using the master password and writes 
+it to the passwords list 
 
-decrypt() Runs decrypt_part (the bit that actually decrypts and then choice()) - not particularly good but saved me rewriting code 
+decrypt() Runs decrypt_part (the bit that actually decrypts and then choice()) 
+- not particularly good but saved me rewriting code 
 
-decrypt_part() Takes all encrypted passwords from the list, decrypts and prints them (password list stays encrypted)
+decrypt_part() Takes all encrypted passwords from the list, decrypts and prints
+them (password list stays encrypted)
     
 genMasterPassword() Generates the master password (20 characters long)
 
 start() Starts the program 
+
+
+
+## Licence 
+MIT License
+Copyright (c) fredhappyface
+(See the [LICENSE](/LICENSE.md) for more information.)
+
+
+<!--
+TODO: Add screenshots to readme-assets/screenshots/desktop/ named 
+screenshot-[number].png
+-->
+## Screenshots 
+
+### Desktop 
+|Screenshots                                                                                  |
+|:-:                                                                                          |
+|<img src="readme-assets/screenshots/desktop/screenshot-1.png" alt="Screenshot 1" width="600">|
+|<img src="readme-assets/screenshots/desktop/screenshot-2.png" alt="Screenshot 2" width="600">|
+|<img src="readme-assets/screenshots/desktop/screenshot-3.png" alt="Screenshot 3" width="600">| 
+
+
+
+## Limited Support
+Expect this project to be supported for approximately 6 months (for bug-fixes 
+only). Note that this is not guaranteed. Create an issue for bugs (as this 
+project is carried out in spare time, you may have to wait for a few days)
+
+<img src="readme-assets/support/partial.png" alt="Limited Support" width="600">
 
 
 
