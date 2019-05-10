@@ -81,14 +81,14 @@ remove a password, show passwords or quit the program
 *   Quit        -    q
 
 
-## General Code Overview:
+## General Code Overview
 Import sys to exit the program, random to generate a master key and io to read 
 and write to files
 
 Global list containing encrypted passwords and key 
 
-masterPassword for the example text file containing passwords "hello" and "why"
-- I advise you choose better passwords for sites!
+masterPassword for the example text file containing passwords "hello" and 
+"why" - I advise you choose better passwords for sites!
 masterPassword = ,B3U*]Y)gO'aC(B|gGx1
 
 start() Opens the password file and writes each password to the passwords list 
@@ -108,8 +108,8 @@ passwords
 encrypt() Takes a password, encrypts it using the master password and writes 
 it to the passwords list 
 
-decrypt() Runs decrypt_part (the bit that actually decrypts and then choice()) 
-- not particularly good but saved me rewriting code 
+decrypt() Runs decrypt_part (the bit that actually decrypts and then 
+choice()) - not particularly good but saved me rewriting code 
 
 decrypt_part() Takes all encrypted passwords from the list, decrypts and prints
 them (password list stays encrypted)

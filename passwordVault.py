@@ -5,6 +5,7 @@ read and write to files
 '''
 import sys
 import random
+systemRandom = random.SystemRandom()
 import io
 
 # Global list containing encrypted passwords and key
@@ -65,7 +66,7 @@ def myquit():
     out = ""
     # Adds the passwords to a single string to write to pwd.txt
     for password in passwords:
-         out += (password + "\n")
+        out += (password + "\n")
     # Write to pwd.txt
     with io.open("pwd.txt", 'w', encoding="utf8") as file:
         file.write(out)
@@ -97,10 +98,10 @@ the passwords list
 def encrypt():
     global keystring
     outstring = ""
-    # Ask the user for a password to encrypt 
+    # Ask the user for a password to encrypt
     print("Add a password:")
     messagestring = input(">")
-    # Encrpyts each character using OTP 
+    # Encrpyts each character using OTP
     for index in range(len(messagestring)):
         if index >= len(keystring):
             keystring += keystring
@@ -108,7 +109,7 @@ def encrypt():
         outstring += chr(charint)
     # Add the password to the 'vault'
     passwords.append(outstring)
-    # Show the encrypted password to the user 
+    # Show the encrypted password to the user
     print(outstring)
     choice()
 
@@ -126,9 +127,9 @@ def decrypt_part():
     global keystring
     print("Passwords:")
     # Take each password
-    for i in range(len(passwords)):
+    for password in passwords:
         outstring = ""
-        ncrstring = passwords[i]
+        ncrstring = password
         # Decrypts each character using OTP
         for index in range(len(ncrstring)):
             if index >= len(keystring):
@@ -143,7 +144,7 @@ def genMasterPassword():
     masterPassword = ""
     # Generate each character
     for index in range(20):
-        masterPassword += chr(random.randint(36,124))
+        masterPassword += chr(systemRandom.randint(36,124))
     return masterPassword
 
 # Starts the program
