@@ -1,14 +1,14 @@
 
 
 <p float="left">
-<img src="https://img.shields.io/github/languages/top/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="Github top language">
-<img src="https://img.shields.io/codacy/grade/:codacy-proj-id:.svg?style=flat-square" alt="Codacy grade">
-<img src="https://img.shields.io/codacy/coverage/:codacy-proj-id:.svg?style=flat-square" alt="Codacy coverage">
-<img src="https://img.shields.io/github/repo-size/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="Repository size">
-<img src="https://img.shields.io/github/issues/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="Issues">
-<img src="https://img.shields.io/github/license/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="License">
-<img src="https://img.shields.io/github/commit-activity/m/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="Commit activity">
-<img src="https://img.shields.io/github/last-commit/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="Last commit">
+<a href="../../"><img src="https://img.shields.io/github/languages/top/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="Github top language"></a>
+<a href="https://www.codacy.com/manual/FredHappyface/Python.PasswordVault"><img src="https://img.shields.io/codacy/grade/a88306d37d4e4176883570dfd8e7a140.svg?style=flat-square" alt="Codacy grade"></a>
+<a href="https://www.codacy.com/manual/FredHappyface/Python.PasswordVault"><img src="https://img.shields.io/codacy/coverage/a88306d37d4e4176883570dfd8e7a140.svg?style=flat-square" alt="Codacy coverage"></a>
+<a href="../../"><img src="https://img.shields.io/github/repo-size/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="Repository size"></a>
+<a href="../../issues"><img src="https://img.shields.io/github/issues/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="Issues"></a>
+<a href="/LICENSE.md"><img src="https://img.shields.io/github/license/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="License"></a>
+<a href="../../commits/master"><img src="https://img.shields.io/github/commit-activity/m/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="Commit activity"></a>
+<a href="../../commits/master"><img src="https://img.shields.io/github/last-commit/fredhappyface/Python.PasswordVault.svg?style=flat-square" alt="Last commit"></a>
 </p>
 
 
